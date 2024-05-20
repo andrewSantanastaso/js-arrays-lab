@@ -240,16 +240,13 @@ Complete Exercise 14 in the space below:
 
 // const num = numArrays[2][1]
 const findTarget = (lists, target) => {
-   let output = "target not found"
-
    for (const array of lists) {
       if ((array.includes(target))) {
-         output = "target found"
          let foundTarget = array.find((element) => element == target)
          return foundTarget
       }
    }
-   return output
+   return "Target Not Found"
 }
 const num = findTarget(numArrays, 66)
 
