@@ -194,7 +194,7 @@ for (let num of nums) {
    if (num % 5 === 0) {
       buzz.push(num)
    }
-   if ((num % 3 === 0) && (num % 5 === 0)) {
+   if ((num % 3 === 0 && num % 5 === 0)) {
       fizzbuzz.push(num)
    }
 }
@@ -238,7 +238,22 @@ Exercise 14: Accessing within nested arrays
 Complete Exercise 14 in the space below:
 */
 
-const num = numArrays[2][1]
+// const num = numArrays[2][1]
+const findTarget = (lists, target) => {
+   let output = "target not found"
+
+   for (const array of lists) {
+      if ((array.includes(target))) {
+         output = "target found"
+         let foundTarget = array.find((element) => element == target)
+         return foundTarget
+      }
+   }
+   return output
+}
+const num = findTarget(numArrays, 66)
+
+
 
 console.log('Exercise 14 result:', num);
 
